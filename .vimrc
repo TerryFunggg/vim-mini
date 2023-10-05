@@ -79,7 +79,8 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 " Plugin 
 call plug#begin('~/.vim/plugged')
 
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -88,6 +89,11 @@ call plug#end()
 
 " Plug config
 let g:airline#extensions#tabline#enabled = 1
+
+" tab style
+:hi TabLineFill ctermfg=LightGreen ctermbg=DarkGreen
+:hi TabLine ctermfg=Blue ctermbg=Yellow
+:hi TabLineSel ctermfg=Red ctermbg=Yellow
 
 " Key Map
 let mapleader = '\'
@@ -138,3 +144,9 @@ inoremap <c-n> <Down>
 
 " Clean Search lighline
 nnoremap <ESC> :noh<Return>
+
+" fzf keymap
+nmap <leader>ff :Files<Return>
+nmap <leader>fg :GFiles<Return>
+nmap <leader>fb :Buffers<Return>
+nmap <leader>fa :Ag<Return>

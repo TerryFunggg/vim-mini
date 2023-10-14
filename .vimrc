@@ -143,7 +143,7 @@ inoremap <c-p> <Up>
 inoremap <c-n> <Down>
 
 " Clean Search lighline
-nnoremap <ESC> :noh<Return>
+"nnoremap <ESC> :noh<Return>
 
 " fzf keymap
 nmap <leader>ff :Files<Return>

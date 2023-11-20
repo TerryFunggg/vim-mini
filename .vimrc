@@ -83,7 +83,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
+Plug 'francoiscabrol/ranger.vim'
+Plug 'preservim/nerdtree'
 
 call plug#end()
 
@@ -150,3 +151,7 @@ nmap <leader>ff :Files<Return>
 nmap <leader>fg :GFiles<Return>
 nmap <leader>fb :Buffers<Return>
 nmap <leader>fa :Ag<Return>
+
+" ranger
+let g:ranger_map_keys = 0
+nmap - :RangerNewTab<CR>
